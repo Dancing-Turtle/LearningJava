@@ -18,6 +18,13 @@ public class Square {
         rec = new Rectangle(sizeX, sizeY);
         rec.setFill(color);
     }
+    public Square(double sizeX, double sizeY, Color color, int alpha){
+        rec = new Rectangle(sizeX, sizeY);
+        if(alpha >= 0 | alpha <= 255){
+            rec.setOpacity(alpha);
+        }
+        rec.setFill(color);
+    }
 
     public Square(double sizeX, double sizeY, Color color, double transx, double transY){
         rec = new Rectangle(sizeX, sizeY);

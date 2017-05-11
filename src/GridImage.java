@@ -6,7 +6,7 @@ public class GridImage {
 
     public GridImage(){
         imgView = new ImageView();
-        Image img  = new Image("Assets/grid.jpg");
+        Image img  = new Image("Assets/Img/grid.jpg");
         imgView.setImage(img);
     }
 }

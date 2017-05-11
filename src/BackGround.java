@@ -8,9 +8,8 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 
 public class BackGround extends Pane{
-    public Scene bg;
-    static GridPane grid;
-    public int sY = 150;
+    Scene bg;
+    private static GridPane grid;
 
     public BackGround(){
 
@@ -27,12 +26,6 @@ public class BackGround extends Pane{
         //grid.getChildren().addAll(h.p, ic.p);
 
         bg = new Scene(grid, 0, 0);
-
-        //grid.setGridLinesVisible(true);
-        //grid.getChildren().add(bx.btn);
-        //grid.getChildren().add(sq.rec);
-        //grid.add(sq.rec, 0, 0);
-        //grid.add(bx.btn, 0, 0);
 
     }
 }

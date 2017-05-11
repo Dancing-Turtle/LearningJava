@@ -26,8 +26,8 @@ public class ButtonTest {
         });
     }
 
-    public ButtonTest(double sizeX, double sizeY, double transX, double transY){
-        btn = new Button();
+    public ButtonTest(String name, double sizeX, double sizeY, double transX, double transY){
+        btn = new Button(name);
         btn.setMinWidth(sizeX);
         btn.setMinHeight(sizeY);
         btn.setTranslateX(transX);
