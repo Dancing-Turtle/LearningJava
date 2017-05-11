@@ -24,6 +24,8 @@ public class MakeWindow extends Application{
         primarystage.setTitle("JavaFX Example");
         primarystage.setMinWidth(winX);
         primarystage.setMinHeight(winY);
+        primarystage.setMaxHeight(winY);
+        primarystage.setMaxWidth(winX);
         BackGround bg = new BackGround();
 
         primarystage.setScene(bg.bg);
