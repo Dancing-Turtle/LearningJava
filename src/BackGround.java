@@ -1,11 +1,7 @@
-import javafx.geometry.NodeOrientation;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
 
 public class BackGround extends Pane{
     Scene bg;
@@ -14,7 +10,7 @@ public class BackGround extends Pane{
     public BackGround(){
 
         ButtonTest bx = new ButtonTest(0, 0);
-        GridImage gi = new GridImage();
+        SongImage gi = new SongImage();
         HeaderBar h = new HeaderBar();
         InnerContent ic = new InnerContent();
 

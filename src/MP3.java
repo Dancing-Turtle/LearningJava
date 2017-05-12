@@ -1,11 +1,14 @@
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
+import java.net.URL;
 import java.nio.file.Paths;
 
 public class MP3 {
-    Media m;
-    MediaPlayer mp;
+    static Media m;
+    static MediaPlayer mp;
+    String songpath;
+    VolumeSlider vs;
     //Music: http://www.bensound.com
 
     public MP3(){
@@ -14,8 +17,12 @@ public class MP3 {
     }
 
     public void playSong(String song){
-        m = new Media(Paths.get(song).toUri().toString());
-        mp.dispose();
+        //songpath = getClass().getResource(song).toString();
+        songpath = MP3.class.getResource(song).toString();
+        m = new Media(songpath);
+        if(mp != null){
+            mp.dispose();
+        }
         mp = new MediaPlayer(m);
         mp.setVolume(.1);
         mp.play();
