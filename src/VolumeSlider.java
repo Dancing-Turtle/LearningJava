@@ -3,6 +3,7 @@ import javafx.scene.control.Slider;
 public class VolumeSlider {
     public Slider slider;
     MP3 mp3;
+    Double volume;
 
     public VolumeSlider(){
         slider = new Slider();

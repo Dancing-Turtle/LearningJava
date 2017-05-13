@@ -47,18 +47,25 @@ public class InnerContent {
         songList.setTranslateY(20);
 
         btnPlay.btn.setOnAction(event -> {
-            System.out.println(songList.getSelectionModel().getSelectedItem());
-            switch (songList.getSelectionModel().getSelectedItem()){
-                case "Energy":
-                    mp3.playSong("Assets/Songs/energy.mp3");
-                    si.imgView.setImage(energy);
-                    song = songList.getSelectionModel().getSelectedItem();
-                    break;
-                case "Going Higher":
-                    mp3.playSong("Assets/Songs/goinghigher.mp3");
-                    si.imgView.setImage(goinghigher);
-                    song = songList.getSelectionModel().getSelectedItem();
+            String selectedSong = songList.getSelectionModel().getSelectedItem();
+            if(selectedSong == null){
+                mp3.playSong("Assets/Songs/energy.mp3");
+            } else {
+                System.out.println(songList.getSelectionModel().getSelectedItem());
+                switch (selectedSong){
+                    case "Energy":
+                        mp3.playSong("Assets/Songs/energy.mp3");
+                        si.imgView.setImage(energy);
+                        song = songList.getSelectionModel().getSelectedItem();
+                        break;
+                    case "Going Higher":
+                        mp3.playSong("Assets/Songs/goinghigher.mp3");
+                        si.imgView.setImage(goinghigher);
+                        song = songList.getSelectionModel().getSelectedItem();
+                        break;
+                }
             }
+
         });
         btnPause.btn.setOnAction(event -> {
             if(btnPause.btn.getText() == "Pause"){
